@@ -7,7 +7,7 @@ Variables    ../test_data/login_data.py
 *** Keywords ***
 User Login
     [Arguments]    ${user_login}=${user_data["login_id"]}    ${user_password}= ${user_data["login_password"]}    ${login}=True    ${HEADLESS}=True
-    [Documentation]    Login user to system
+    [Documentation]    Login the user into the system
     ...    Arguments:
     ...    - ${user_login}: User name. Default get from test data
     ...    - ${user_password}: User password. Default get from test data
