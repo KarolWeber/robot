@@ -2,14 +2,16 @@
 Library         SeleniumLibrary
 Resource        ../configuration/configuration.robot
 Resource        ../pages/login_page.robot
-Resource        ../pages/pulpit_page.robot
+Resource        ../locators/dashboard_locators.robot
+Resource        ../pages/dashboard_page.robot
+Variables       ../test_data/dashboard_data.py
 
-Suite Setup     User Login
+Test Setup     User Login
 
 
 *** Test Cases ***
 QuickPayment
-    [Documentation]    Test dashboard quick payment
+    [Documentation]    Dashboard => quick payment
     [Tags]    dashboard
     ${reciever}    Set Variable    ${quick_payment["reciever"]}
     ${amount}    Set Variable    ${quick_payment["amount"]}
@@ -21,7 +23,7 @@ QuickPayment
     [Teardown]    Default Teardown
 
 TopUpPhone
-    [Documentation]    Test dashboard phone top-up
+    [Documentation]    Dashboard => phone top-up
     [Tags]    dashboard
     ${reciever}    Set Variable    ${top_up_phone["reciever"]}
     ${amount}    Set Variable    ${top_up_phone["amount"]}

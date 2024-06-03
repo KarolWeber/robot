@@ -1,8 +1,7 @@
 *** Settings ***
 Library    SeleniumLibrary
-Resource    ../locators/locators.robot
+Resource    ../locators/dashboard_locators.robot
 Resource    ../configuration/configuration.robot
-Variables    ../test_data/test_data.py
 
 *** Keywords ***
 Quick Payment
